@@ -6,12 +6,24 @@ package com.myspace.bpmproject;
 
 public class person implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public person() {
-    }
+	@org.kie.api.definition.type.Label(value = "Age")
+	private java.lang.Integer age;
 
+	public person() {
+	}
 
+	public java.lang.Integer getAge() {
+		return this.age;
+	}
 
+	public void setAge(java.lang.Integer age) {
+		this.age = age;
+	}
+
+	public person(java.lang.Integer age) {
+		this.age = age;
+	}
 
 }
