@@ -8,8 +8,11 @@ public class person implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Age")
+	@org.kie.api.definition.type.Label("Age")
 	private java.lang.Integer age;
+
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
 
 	public person() {
 	}
@@ -22,8 +25,17 @@ public class person implements java.io.Serializable {
 		this.age = age;
 	}
 
-	public person(java.lang.Integer age) {
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public person(java.lang.Integer age, java.lang.String name) {
 		this.age = age;
+		this.name = name;
 	}
 
 }
