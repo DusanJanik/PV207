@@ -11,8 +11,11 @@ public class person implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Age")
 	private java.lang.Integer age;
 
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
+
+	@org.kie.api.definition.type.Label(value = "Surname")
+	private java.lang.String surname;
 
 	public person() {
 	}
@@ -33,9 +36,19 @@ public class person implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public person(java.lang.Integer age, java.lang.String name) {
+	public java.lang.String getSurname() {
+		return this.surname;
+	}
+
+	public void setSurname(java.lang.String surname) {
+		this.surname = surname;
+	}
+
+	public person(java.lang.Integer age, java.lang.String name,
+			java.lang.String surname) {
 		this.age = age;
 		this.name = name;
+		this.surname = surname;
 	}
 
 }
